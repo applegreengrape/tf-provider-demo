@@ -4,8 +4,8 @@ db = sqlite3.connect('demo.db')
 
 cursor = db.cursor()
 cursor.execute('''CREATE TABLE demo(
-    user CHAR(100),
-    tok NVARCHAR(100),
+    user CHAR(100) UNIQUE,
+    id NVARCHAR(100),
     stats CHAR(100)
     );
                ''')
