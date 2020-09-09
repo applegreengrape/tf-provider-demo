@@ -3,5 +3,5 @@ provider "demo" {
 }
 
 resource "demo_user" "test" {
-  user = "hello world"
+  user = "abc07_02"
 }
