@@ -13,6 +13,7 @@ func TestDemoUser_basic(t *testing.T) {
 	resource.ParallelTest(t, resource.TestCase{
 		PreCheck:  func() { testAccPreCheck(t) },
 		Providers: testAccProviders,
+		CheckDestroy:      nil,
 		Steps: []resource.TestStep{
 			{
 				Config: testDemoUserConfig_basic,
@@ -26,6 +27,6 @@ func TestDemoUser_basic(t *testing.T) {
 
 const testDemoUserConfig_basic = `
 resource "demo_user" "test" {
-  user = "abc123"
+	user = "abc08_124"
 }
 `

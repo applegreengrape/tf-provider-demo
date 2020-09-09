@@ -3,5 +3,13 @@ provider "demo" {
 }
 
 resource "demo_user" "test" {
-  user = "abc07_02"
+    user = "abc07"
+}
+
+data "demo_user" "test" {
+    user = "abc06"
+}
+
+output "test"{
+    value = data.demo_user.test
 }
