@@ -13,7 +13,7 @@ module "api-gw" {
       method = "GET"
       lambda = "tag"
       request_parameters = {
-        "method.request.querystring.apiTok" = true
+        "method.request.header.Authorization" = true
         "method.request.querystring.team" = true
       }
     },

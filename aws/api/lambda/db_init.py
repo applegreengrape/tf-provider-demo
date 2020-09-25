@@ -24,9 +24,9 @@ item = {}
 item["id"] = "1"
 item["tag"] = "team_abc"
 item["name"] = "some_cool_name"
-item["hostname"] = "some_cool_hostname"
-item["owner"] = "some_cool_owner"
-item["region"] = "some_cool_region"
+item["hostname"] = "📛some_cool_hostname"
+item["owner"] = "🐻some_cool_owner"
+item["region"] = "📍some_cool_region"
 item["meta"] = "Blablablablabla, blabla bla blablablabla blabla blablablablablabla"
 
 _item = dict_to_item(item)
