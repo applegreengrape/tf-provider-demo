@@ -22,14 +22,22 @@ def dict_to_item(raw):
       
 item = {}
 item["id"] = "1"
-item["tag"] = "team_abc"
-item["name"] = "some_cool_name"
-item["hostname"] = "📛some_cool_hostname"
-item["owner"] = "🐻some_cool_owner"
-item["region"] = "📍some_cool_region"
-item["meta"] = "Blablablablabla, blabla bla blablablabla blabla blablablablablabla"
+item["tag"] = "abc"
+item["name"] = "🗿"
+item["hostname"] = "📛 hostname"
+item["owner"] = "🐻 owner"
+item["region"] = "📍 home"
+item["meta"] = "📝 Blablablablabla, blabla bla blablablabla blabla blablablablablabla"
+
+item2 = {}
+item2["id"] = "2"
+item2["tag"] = "releaser"
+item2["product"] = "🦄App"
+item2["version"] = "v0.0.1"
+item2["relased date"] = "11/11/2020"
 
 _item = dict_to_item(item)
-print(_item["M"])
+_item2 = dict_to_item(item2)
 dynamodb = boto3.client('dynamodb')
 dynamodb.put_item(TableName='tag', Item=_item["M"])
+dynamodb.put_item(TableName='tag', Item=_item2["M"])
