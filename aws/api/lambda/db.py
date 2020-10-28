@@ -21,23 +21,15 @@ def dict_to_item(raw):
         return {'NULL': True}
       
 item = {}
-item["id"] = "1"
-item["tag"] = "abc"
-item["name"] = "🗿"
-item["hostname"] = "📛 hostname"
-item["owner"] = "🐻 owner"
-item["region"] = "📍 home"
-item["meta"] = "📝 Blablablablabla, blabla bla blablablabla blabla blablablablablabla"
+item["id"] = "3"
+item["tag"] = "dev"
+item["name"] = "👩🏻‍💻👩🏻‍💻👩🏻‍💻"
+item["ami"] = "ami-005e54dee72cc1d00"
+item["instance_type"] = "t2.micro"
+item["db_allocated_storage"] = "20"
+item["db_instance_class"] = "db.t2.micro"
 
-item2 = {}
-item2["id"] = "2"
-item2["tag"] = "releaser"
-item2["product"] = "🦄App"
-item2["version"] = "v0.0.1"
-item2["relased date"] = "11/11/2020"
 
-_item = dict_to_item(item)
-_item2 = dict_to_item(item2)
+data = dict_to_item(item)
 dynamodb = boto3.client('dynamodb')
-dynamodb.put_item(TableName='tag', Item=_item["M"])
-dynamodb.put_item(TableName='tag', Item=_item2["M"])
+dynamodb.put_item(TableName='tag', Item=data["M"])
